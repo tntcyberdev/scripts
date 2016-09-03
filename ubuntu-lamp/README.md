@@ -6,18 +6,22 @@ Clone this repository to your computer and launch a Virtual Box containing a min
 
 `$ vagrant ssh`
 
-### 
+### Vagrantfile configs
   `config.vm.box = "ubuntu/trusty64" `
-  find boxes at https://atlas.hashicorp.com/search.
 
-### using a specific IP.
+  find more boxes at https://atlas.hashicorp.com/search.
+
+using a specific IP:
+
   `config.vm.network "private_network", ip: "192.168.33.10" `
 
-### shared folder:
+shared folder:
+
   `config.vm.synced_folder "./docroot", "/var/www/html" `
 
 
-### Inline Shell provisioning
+Inline Shell provisioning:
+
 ```
 config.vm.provision "shell", inline: <<-SHELL
     sudo apt-get update
